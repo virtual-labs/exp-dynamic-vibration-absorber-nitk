@@ -2,38 +2,85 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "A system with 100kg mass and 1kN/mm stiffness needs to be operated at 50rad/s. It is intended to transfer all vibrations of this mass to a secondary system. Which of the following would be suitable",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "10kg mass with 100N/mm stiffness",
+        "b": "20kg mass with 100N/mm stiffness",
+        "c": "20kg mass with 50N/mm stiffness",
+        "d": "10kg mass with 50N/mm stiffness"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": ""
+    },
+    {
+      "question": "A two DOF system with one of natural frequency having value of zero is called",
+      "answers": {
+        "a": "Degenerative/Semi-definite system",
+        "b": "Indefinite system",
+        "c": "Definite system",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "A SDOF was vibrating violently at a given frequency, it was decided to add a secondary system to it and control vibration. The added system to control vibration is known as",
+      "answers": {
+        "a": "Shaker",
+        "b": "Tuned Dynamic Vibration Absorber",
+        "c": "Critical Damper",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "One of the natural frequencies of the Tuned Mass Damper system is the same as natural frequency of secondary mass-spring system",
+      "answers": {
+        "a": "False",
+        "b": "True"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "For effective isolation, frequency ratio should be greater than",
+      "answers": {
+        "a": "1",
+        "b": "0.707",
+        "c": "1.414",
+        "d": "2"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
     }
   ]
 }
