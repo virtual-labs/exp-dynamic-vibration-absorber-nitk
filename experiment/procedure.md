@@ -1,11 +1,19 @@
-1. Set the value of primary mass and stiffness (m<sub>1</sub>, k<sub>1</sub>).  
-   [<img src="./images/TMD1.jpg" width="800" height="600" />](./images/TMSD1.jpg)
+### Procedure
 
-2. Set the operating frequency at which you wish to operate the system.  
-   [<img src="./images/TMD2.jpg" width="800" height="600" />](./images/TMD2.jpg)
+<div style="text-align:left">
+  Click on the Simulation icon    <img src="images/simulation.png" alt="Alt text" style="height:80px; width:80px;">  to view the simulation screen. 
 
-3. Edit the value of secondary mass and stiffness (m<sub>2</sub>, k<sub>2</sub>) such that the vibration in primary mass reduces.  
-   [<img src="./images/TMD3.jpg" width="800" height="600" />](./images/TMD3.jpg)
+   ![Alt text](images/Simscreen1.png)
+   
+   In order to view the variable section click on the Variable icon. <img src="images/var1.png" alt="Alt text" style="height:80px; width:80px;">
 
-4. Click right arrow to observe the graph of X<sub>2</sub>/X<sub>st</sub>  
-   [<img src="./images/TMD4.jpg" width="800" height="600" />](./images/TMD4.jpg)
+   ![Alt text](images/var2.png)
+
+   Click on the graph icon  <img src="images/graph1.png" alt="Alt text" style="height:80px; width:80px;"> to view the graph.  
+
+   ![Alt text](images/graphscreen1.png)
+
+   Click on the result icon  <img src="images/result.png" alt="Alt text" style="height:80px;width:80px;"> to view the result tab.
+  
+  ![Alt text](images/resultscreen.png)
+</div>
