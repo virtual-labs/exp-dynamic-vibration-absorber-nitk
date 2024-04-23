@@ -36,6 +36,7 @@ let mediaQuery1 = window.matchMedia("screen and (max-width: 540px)");
 let mediaQuery2 = window.matchMedia("screen and (max-width: 704px)");
 let mediaQuery3 = window.matchMedia("screen and (max-width: 820px)");
 let mediaQuery4 = window.matchMedia("screen and (max-width: 944px)");
+let mediaQuery5 = window.matchMedia("screen and (max-width: 1200px)");
 let scaleX = 0.5;
 let scaleY = 0.5;
 
@@ -282,23 +283,30 @@ const setMediaQueries = function (ctx) {
     scaleY = 0.6;
   } else if (mediaQuery2.matches) {
     scaleX = 1;
-    // originalX = canvas.width / 4 - 10;
+    originalX = canvas.width / 4 - 10;
     scaleY = 0.6;
   } else if (mediaQuery3.matches) {
-    scaleX = 1;
+    scaleX = 1.2;
     originalX = canvas.width / 4 - 10;
-    scaleY = 0.4;
+    scaleY = 0.8;
   } else if (mediaQuery4.matches) {
-    scaleX = 1;
+    scaleX = 1.3;
     originalX = canvas.width / 4 - 10;
-    scaleY = 0.4;
-  } else {
-    // originalX = canvas.width / 4 - 20;
+    scaleY = 1.3;
+  } else if (mediaQuery5.matches) {
+    scaleX = 0.4;
+    originalX = canvas.width / 4 - 10;
+    scaleY = 0.9;
+  }else {
+    originalX = canvas.width / 4 - 20;
     scaleX = 0.3;
     scaleY = 0.5;
   }
   ctx.canvas.width = document.documentElement.clientWidth * scaleX;
   ctx.canvas.height = document.documentElement.clientHeight * scaleY;
+
+  // graphctx1.clearRect(0, 0, canvas.width, canvas.height);
+  // graphctx1.translate(originalX, 0);
   return originalX;
 };
 
@@ -364,36 +372,40 @@ function generateGraph() {
   graphctx1.rotate(-Math.PI / 2);
   graphctx1.fillText("X1/Xst", 0, 20);
   graphctx1.restore();
-  graphctx1.fillText("ω/ω2", 170, 320);
+  graphctx1.fillText("ω/ω2", 170, 290);
   graphctx1.beginPath();
 
-  graphctx1.moveTo(25, 50);
-  graphctx1.lineTo(25, 300);
-  graphctx1.moveTo(25, 300);
-  graphctx1.lineTo(400, 300);
+  graphctx1.moveTo(25, 30);
+  graphctx1.lineTo(25, 270);
+  graphctx1.moveTo(25, 270);
+  graphctx1.lineTo(400, 270);
   graphctx1.strokeStyle = "black";
   graphctx1.stroke();
   graphctx1.closePath();
 
   graphctx1.beginPath();
-  graphctx1.moveTo(25, 300);
+  graphctx1.moveTo(25, 150); // Adjusted starting point (25, 150) instead of (25, 200)
   graphctx1.strokeStyle = "red";
   graphctx1.lineWidth = 1;
   
+  const yOffset = 30; // Amount to move the graph up
+  
   for (let i = 0; i < 4; i += 0.012) {
-    mu = m1/m2;
-    temp1 = i;
-    temp2 = (ω2*i/ω1) ** 2;
-    den = ((1+mu)*temp2) + (temp1 ** 2);
-    var solution = (1-(temp1**2))/(((temp1**2)*temp2) -den +1);
-    if (Math.abs(solution) < 300) {
-      solution = Math.abs(solution);
-    }else{
-      solution = 300
-    }
-    const dataPoint1 = solution;
-    graphctx1.lineTo(i * 85 + 25, 300 - (60 * dataPoint1) / 20);
+      mu = m1 / m2;
+      temp1 = i;
+      temp2 = (ω2 * i / ω1) ** 2;
+      den = ((1 + mu) * temp2) + (temp1 ** 2);
+      var solution = (1 - (temp1 ** 2)) / (((temp1 ** 2) * temp2) - den + 1);
+      if (Math.abs(solution) < 300) {
+          solution = Math.abs(solution);
+      } else {
+          solution = 300
+      }
+      const dataPoint1 = solution;
+      // Adjust the y-coordinate by subtracting the yOffset
+      graphctx1.lineTo(i * 85 + 25, 300 - (60 * dataPoint1) / 20 - yOffset);
   }
+  
 
   graphctx1.stroke();
 
@@ -408,37 +420,40 @@ function generateGraph() {
   graphctx2.rotate(-Math.PI / 2);
   graphctx2.fillText("X2/Xst", 0, 20);
   graphctx2.restore();
-  graphctx2.fillText("ω/ω2", 170, 320);
+  graphctx2.fillText("ω/ω2", 170, 275);
   graphctx2.beginPath();
 
   graphctx2.moveTo(25, 50);
-  graphctx2.lineTo(25, 300);
-  graphctx2.moveTo(25, 300);
-  graphctx2.lineTo(400, 300);
+  graphctx2.lineTo(25, 250);
+  graphctx2.moveTo(25, 250);
+  graphctx2.lineTo(400, 250);
   graphctx2.strokeStyle = "black";
   graphctx2.stroke();
   graphctx2.closePath();
 
+  let yOffsetRed = 50;
+
   graphctx2.beginPath();
-  graphctx2.moveTo(25, 300);
+  graphctx2.moveTo(25, 300 - yOffsetRed); // Adjusted starting point
   graphctx2.strokeStyle = "red";
   graphctx2.lineWidth = 1;
   
   for (let j = 0; j < 4; j += 0.01) {
-    mu = m1/m2;
-    temp1 = j;
-    temp2 = (ω2*j/ω1) ** 2;
-    den = ((1+mu)*temp2) + (temp1 ** 2);
-    var solution = (1)/(((temp1**2)*temp2) -den +1);
-    if (Math.abs(solution) < 300) {
-      solution = Math.abs(solution);
-    }else{
-      solution = 300
-    }
-    const dataPoint1 = solution;
-    graphctx2.lineTo(j * 85 + 25, 300 - (60 * dataPoint1) / 20);
+      mu = m1 / m2;
+      temp1 = j;
+      temp2 = (ω2 * j / ω1) ** 2;
+      den = ((1 + mu) * temp2) + (temp1 ** 2);
+      var solution = (1) / (((temp1 ** 2) * temp2) - den + 1);
+      if (Math.abs(solution) < 300) {
+          solution = Math.abs(solution);
+      } else {
+          solution = 300
+      }
+      const dataPoint1 = solution;
+      // Adjust the y-coordinate by subtracting the yOffsetRed
+      graphctx2.lineTo(j * 85 + 25, 300 - yOffsetRed - (60 * dataPoint1) / 20);
   }
-
+  
   graphctx2.stroke();
 }
 
