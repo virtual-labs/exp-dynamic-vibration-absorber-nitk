@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "The mass whose vibrations are to be kept minimum is called?",
+      "answers": {
+        "a": "Absorber Mass",
+        "b": "Secondary Mass",
+        "c": "Primary Mass",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "Tuned Mass Damper is essentially",
+      "answers": {
+        "a": "a 2DoF system",
+        "b": "a Complex pendulum",
+        "c": "a 1DoF system with extra mass",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "When excitation frequency is equal to natural frequency of absorber, the main system amplitude is ?",
+      "answers": {
+        "a": "maximum",
+        "b": "zero",
+        "c": "half of maximum",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "TMD system has",
+      "answers": {
+        "a": "∞ Natural Frequencies",
+        "b": "1 Natural Frequency",
+        "c": "2 Natural Frequencies",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "Without the absorber mass the number of natural frequencies in a TMD is",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "3"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    }
+  ]
+}
