@@ -37,6 +37,7 @@ let mediaQuery2 = window.matchMedia("screen and (max-width: 704px)");
 let mediaQuery3 = window.matchMedia("screen and (max-width: 820px)");
 let mediaQuery4 = window.matchMedia("screen and (max-width: 944px)");
 let mediaQuery5 = window.matchMedia("screen and (max-width: 1200px)");
+let mediaQuery6 = window.matchMedia("screen and (max-width: 1400px)");
 let scaleX = 0.5;
 let scaleY = 0.5;
 
@@ -297,6 +298,10 @@ const setMediaQueries = function (ctx) {
     scaleX = 0.4;
     originalX = canvas.width / 4 - 10;
     scaleY = 0.9;
+  } else if (mediaQuery6.matches) {
+    scaleX = 0.3;
+    originalX = canvas.width / 4 - 10;
+    scaleY = 0.6;
   }else {
     originalX = canvas.width / 4 - 20;
     scaleX = 0.3;
