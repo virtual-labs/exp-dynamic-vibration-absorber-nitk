@@ -10,6 +10,7 @@ em:current font size
 /* **************************** */
 
 @media (max-width: 84em) {
+
 }
 
 /* **************************** */
@@ -137,7 +138,7 @@ em:current font size
     margin-left: 200px;
   }
   #canvas {
-    margin-top: -490px;
+    margin-top: -520px;
     
   }
   .graph-div{
